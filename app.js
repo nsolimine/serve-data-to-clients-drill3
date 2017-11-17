@@ -59,4 +59,4 @@ app.get("/:id", cors(), function (request, respond){
   });
 });
 
-app.listen(process.env||4000);
+app.listen(process.env.PORT||4000);
