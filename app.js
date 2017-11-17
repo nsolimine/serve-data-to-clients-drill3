@@ -30,7 +30,7 @@ const students = [{
   homeTown: "Wichita"
 }];
 
-app.get("/", cors(), function (request, respond){
+app.get("/", cors(), function (request, response){
   response.json({
     students
   });
@@ -45,7 +45,7 @@ function getID(students, id) {
   return null;
 }
 
-app.get("/:id", cors(), function (request, respond){
+app.get("/:id", cors(), function (request, response){
   var idPull = getID(students, request.params.id);
   if (!idPull){
     response.status(404).json({
